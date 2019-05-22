@@ -5,4 +5,5 @@
     <string name="image_desc_mensaje">Enviar un mensaje con el texto.</string>
     <string name="image_desc_buscar">Buscar el texto en Internet.</string>
     <string name="image_desc_mapas">Abrir la dirección en Mapas</string>
+    <string name="image_desc_web">Abrir una dirección Web.</string>
 </resources>

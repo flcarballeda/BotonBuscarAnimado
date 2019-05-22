@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import java.io.UnsupportedEncodingException;
+import java.net.MalformedURLException;
 import java.net.URLEncoder;
 
 public class DiferentesIntentActivity extends AppCompatActivity {
@@ -75,6 +76,19 @@ public class DiferentesIntentActivity extends AppCompatActivity {
             startActivity(intent);
         } else {
             Toast toast = Toast.makeText(this, "No se encuentra aplicación para enviar el mensaje.", Toast.LENGTH_SHORT);
+            toast.show();
+        }
+    }
+    public void webView(View v) {
+        EditText editText = findViewById(R.id.editText);
+        String texto = editText.getText().toString();
+        try {
+            new java.net.URL( texto);
+            Intent intent = new Intent(this, WebActivity.class);
+            intent.putExtra( WebActivity.INTENT_PARAMETER, texto);
+            startActivity( intent);
+        } catch (MalformedURLException ex) {
+            Toast toast = Toast.makeText(this, "El Texto no es una URL Válida.", Toast.LENGTH_SHORT);
             toast.show();
         }
     }
