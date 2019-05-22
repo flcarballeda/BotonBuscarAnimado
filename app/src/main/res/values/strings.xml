@@ -6,4 +6,7 @@
     <string name="image_desc_buscar">Buscar el texto en Internet.</string>
     <string name="image_desc_mapas">Abrir la dirección en Mapas</string>
     <string name="image_desc_web">Abrir una dirección Web.</string>
+    <string name="button_animation_1">Animación 1</string>
+    <string name="button_animation_2">Animación 2</string>
+    <string name="image_desc_lion">image to animate</string>
 </resources>

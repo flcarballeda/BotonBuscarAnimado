@@ -79,6 +79,7 @@ public class DiferentesIntentActivity extends AppCompatActivity {
             toast.show();
         }
     }
+
     public void webView(View v) {
         EditText editText = findViewById(R.id.editText);
         String texto = editText.getText().toString();
@@ -90,6 +91,22 @@ public class DiferentesIntentActivity extends AppCompatActivity {
         } catch (MalformedURLException ex) {
             Toast toast = Toast.makeText(this, "El Texto no es una URL Válida.", Toast.LENGTH_SHORT);
             toast.show();
+        }
+    }
+
+    public void animacion(View v) {
+        switch ( v.getId()) {
+            case R.id.animationUno: {
+                Intent intent = new Intent( this, MainActivity.class);
+                startActivity( intent);
+            } break;
+            case R.id.animationDos: {
+                Intent intent = new Intent( this, Animation2Activity.class);
+                startActivity( intent);
+            } break;
+            default: {
+                Log.d( "MYAPP", Integer.toString( v.getId()));
+            } break;
         }
     }
 }

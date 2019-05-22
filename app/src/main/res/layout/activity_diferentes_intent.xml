@@ -95,4 +95,30 @@
         app:layout_constraintTop_toTopOf="@+id/imageButtonSearch"
         app:srcCompat="@drawable/ic_web_black_24dp" />
 
+    <Button
+        android:id="@+id/animationUno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/button_animation_1"
+        android:onClick="animacion"
+        app:layout_constraintEnd_toStartOf="@+id/animationDos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonSearch" />
+
+    <Button
+        android:id="@+id/animationDos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/button_animation_2"
+        android:onClick="animacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/animationUno"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonSearch" />
+
 </android.support.constraint.ConstraintLayout>
