@@ -2,4 +2,7 @@
     <string name="app_name">Intent Implicito</string>
     <string name="text_name">Introduce busqueda:</string>
     <string name="text_hint">Texto a buscar.</string>
+    <string name="image_desc_mensaje">Enviar un mensaje con el texto.</string>
+    <string name="image_desc_buscar">Buscar el texto en Internet.</string>
+    <string name="image_desc_mapas">Abrir la dirección en Mapas</string>
 </resources>
