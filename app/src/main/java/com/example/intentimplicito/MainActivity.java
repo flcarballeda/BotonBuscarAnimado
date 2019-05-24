@@ -15,6 +15,9 @@ public class MainActivity extends AppCompatActivity {
 
     private int originalWidth;
     private static final int DURATION = 1000;
+    // Esta es la versión de Valeriano.
+    private ConstraintLayout.LayoutParams lparams;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         if (editText.getWidth() == originalWidth) { // Debo animar el expand
             TextView textView = findViewById(R.id.textViewLabel);
             // Tomo el campo TextView como referencia para el tamaño
-            final ConstraintLayout.LayoutParams lparams = (ConstraintLayout.LayoutParams) editText.getLayoutParams();
+            lparams = (ConstraintLayout.LayoutParams) editText.getLayoutParams();
             // Creo una animación de in Entero entre los valores
             ValueAnimator anim = ValueAnimator.ofInt(editText.getWidth(), textView.getWidth());
             // Pongo el CallBack a la nueva clase que se crea para esta animación.
@@ -56,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
             // Ya está expandido
             String texto = editText.getText().toString();
             if (texto.isEmpty()) { // No tengo texto, debo colapsar
+                // Esta es mi versión Original
                 // Tomo el valor de las constraint que tiene el objeto EditText en este momento.
                 final ConstraintLayout.LayoutParams lparams = (ConstraintLayout.LayoutParams) editText.getLayoutParams();
                 // Creo una animación de un valor Entero (Integer o Int)

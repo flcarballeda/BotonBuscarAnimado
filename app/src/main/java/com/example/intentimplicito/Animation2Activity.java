@@ -1,5 +1,6 @@
 package com.example.intentimplicito;
 
+import android.animation.ObjectAnimator;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,9 +16,9 @@ public class Animation2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_animation2);
         image = findViewById( R.id.imageViewLion);
-        ConstraintLayout.LayoutParams layoutParams = (ConstraintLayout.LayoutParams) image.getLayoutParams();
-        layoutParams.l = (-1 * layoutParams.width);
-        image.setLayoutParams( layoutParams);
+        ObjectAnimator animation = ObjectAnimator.ofFloat(image, "translationX", -1000f);
+        animation.setDuration(2);
+        animation.start();
     }
 
     @Override
