@@ -11,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Animation3Activity"></activity>
+        <activity
+            android:name=".Animation4Activity"
+            android:label="@string/title_activity_animation4"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".Animation3Activity" />
         <activity android:name=".Animation2Activity" />
         <activity android:name=".WebActivity" />
         <activity android:name=".DiferentesIntentActivity">
