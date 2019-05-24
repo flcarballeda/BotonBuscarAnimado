@@ -20,17 +20,19 @@ public class Animation2Activity extends AppCompatActivity {
         image = findViewById( R.id.imageViewLion);
         ConstraintLayout.LayoutParams lparams = (ConstraintLayout.LayoutParams)image.getLayoutParams();
         rightInitialPosition = lparams.rightMargin;
-        ObjectAnimator animation = ObjectAnimator.ofFloat(image, "translationX", -600f);
-        animation.setDuration(2);
+        // Animo el elemento
+        ObjectAnimator animation = ObjectAnimator.ofFloat(image, "translationX", (-1f *image.getDrawable().getIntrinsicWidth()));
+        animation.setDuration(1);
         animation.start();
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        ObjectAnimator animation = ObjectAnimator.ofFloat(image, "x", -600f, 0f);
+        ObjectAnimator animation = ObjectAnimator.ofFloat(image, "x", (-1f *image.getDrawable().getIntrinsicWidth()), 0f);
+        animation.setStartDelay( 1000);
         animation.setInterpolator(new DecelerateInterpolator());
-        animation.setDuration(20000);
+        animation.setDuration(2000);
         animation.start();
     }
 }
