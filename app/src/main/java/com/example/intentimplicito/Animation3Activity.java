@@ -14,16 +14,16 @@ public class Animation3Activity extends AppCompatActivity {
         setContentView(R.layout.activity_animation3);
 
         View v = findViewById(R.id.imageViewScaleFadeOut);
-        scaleView(v, 1.5f, 1.5f);
+        scaleView(v, 1.5f, 10f);
     }
     private void scaleView(View v, float startScale, float endScale) {
         Animation anim = new ScaleAnimation(
-                1f, 1f, // Start and end values for the X axis scaling
+                startScale, endScale, // Start and end values for the X axis scaling
                 startScale, endScale, // Start and end values for the Y axis scaling
-                Animation.RELATIVE_TO_SELF, 0f, // Pivot point of X scaling
-                Animation.RELATIVE_TO_SELF, 1f); // Pivot point of Y scaling
+                Animation.RELATIVE_TO_SELF, 0.5f, // Pivot point of X scaling
+                Animation.RELATIVE_TO_SELF, 0.5f); // Pivot point of Y scaling
         anim.setFillAfter(true); // Needed to keep the result of the animation
-        anim.setDuration(1000);
+        anim.setDuration(10000);
         v.startAnimation(anim);
     }
 }
