@@ -108,6 +108,10 @@ public class DiferentesIntentActivity extends AppCompatActivity {
                 Intent intent = new Intent( this, Animation3Activity.class);
                 startActivity( intent);
             } break;
+            case R.id.animationCuatro: {
+                Intent intent = new Intent( this, Animation4Activity.class);
+                startActivity( intent);
+            } break;
             default: {
                 Log.d( "MYAPP", Integer.toString( v.getId()));
             } break;

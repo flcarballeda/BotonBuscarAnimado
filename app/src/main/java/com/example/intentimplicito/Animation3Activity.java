@@ -44,7 +44,7 @@ public class Animation3Activity extends AppCompatActivity {
                 .setDuration(5000);
 
         final AnimatorSet animatorFinalSet = new AnimatorSet();
-        animatorInitialSet.playTogether(
+        animatorFinalSet.playTogether(
                 scaleAnimatorX2,
                 scaleAnimatorY2,
                 alphaAnimator
